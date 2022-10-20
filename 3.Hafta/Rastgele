@@ -1,0 +1,41 @@
+package hafta3;
+
+public class Rastgele {
+
+	public static void main(String[] args) {
+		/*marh random komöutu kullanılarak renkler,yazı,tura zar gibi uygulamalar yapıp
+		 */
+		int rs;
+		 
+		//rasgele renk
+		String renk[]= {"mavi","sarı","yeşil","kırmızı"};
+		rs=(int)(Math.random()*4);
+		System.out.println("seçilen renk: "+renk[rs]);
+		
+		//zar programı
+		rs=1+(int)(Math.random()*6);
+		System.out.println("atılan zar: "+rs);
+		
+		//yazı tura 
+		rs=(int)(Math.random()*2);
+		if(rs==1) {
+			System.out.println("atılan para yazı geldi...");
+		}else {
+			System.out.println("atılan para tura geldi...");
+		}
+		
+		//ayakkabı numarası 34-45 arası
+		rs=34+(int)(Math.random()*10);
+		System.out.println("ayakkabı numarası: "+rs);
+		
+		//sınıfta okuyan öğrenci numarası
+		rs=(int)(Math.random()*99);
+		if(rs<10) {
+			System.out.println("bilgisayar prog.ogr."+rs);
+		}else {
+			System.out.println("makine tekn. öğrencıalri"+rs);
+		}
+		
+	}
+
+}
