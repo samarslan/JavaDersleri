@@ -1,32 +1,25 @@
-package org.example;
+package intro;
 
 import java.util.Scanner;
 
-public class Main {
+public class main {
 
-    public static void main(String[] args) {
-        int yol, tl;
-        Scanner oku=new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int benzin, yol=0, tl=0;
+		System.out.println("Alınan benzini giriniz:\n");
+		benzin = input.nextInt();
+		do {
+			System.out.println("Yüklenen benzin ile kaç km gittiniz: ");
+			yol=input.nextInt();
+			if(yol>1000) {
+				System.out.println("Km maximum 999 olmalıdır.");
+			}
+		}
+		while(yol>1000); {
+				System.out.println("Harcanan benzın mıktarı "+tl/yol);
 
-        System.out.println("Kaç tl benzin dolduruldu?");
-        tl=oku.nextInt();
-
-
-        System.out.println("Kaç km yol gidildi?");
-        yol=oku.nextInt();
-        if(yol>1000){
-            System.out.println("En fazla 1000km girebilirsiniz");
-            while(true){
-                System.out.println("Kaç km yol gidildi?");
-                yol=oku.nextInt();
-                if(yol>1000){
-                    System.out.println("En fazla 1000km girebilirsiniz");
-                }
-                else {
-                    break;
-                }
-            }
-        }
-        System.out.println("Kilometre başına "+(float)tl/(float) yol+" tl para harcadınız");
-    }
-}
+		}
+		}
+	}
