@@ -1,6 +1,3 @@
-package org.example;
-
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -13,8 +10,6 @@ public class Main {
         for (i=0; i<10;i++){
             System.out.println("Sayı girin: ");
             dizi[i]=oku.nextInt();
-        }
-        for(i=0;i<10;i++){
             if(dizi[i]!=2&&dizi[i]%2==0){
                 toplam=toplam+dizi[i];
             }
