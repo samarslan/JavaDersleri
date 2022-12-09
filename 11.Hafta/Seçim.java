@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class Main {
@@ -8,11 +9,11 @@ public class Main {
         OranHesapla(oylar,yuzde);
 
         int kazanan=MaksimumDizi(oylar);
-        System.out.println("Kazanan: "+partiler[kazanan]+" Partisi "+oylar[kazanan]+ " oy ile seçmenlerin %"+yuzde[kazanan]+"'nın oyunu aldı");
+        System.out.println("Kazanan: "+partiler[kazanan]+" Partisi "+oylar[kazanan]+ " oy ile seçmenlerin %"+new DecimalFormat("##.##").format(yuzde[kazanan])+"'nın oyunu aldı");
 
         System.out.println("Sonuçlar:");
         for (int i = 0; i < partiler.length; i++) {
-            System.out.println(partiler[i]+" Partisi "+oylar[i]+ " oy ile seçmenlerin %"+yuzde[i]+"'nın oyunu aldı");
+            System.out.println(partiler[i]+" Partisi "+oylar[i]+ " oy ile seçmenlerin %"+new DecimalFormat("##.##").format(yuzde[i])+"'nın oyunu aldı");
         }
     }
 
@@ -37,7 +38,7 @@ public class Main {
 
     private static void OranHesapla(int[] oylar, double[] oranlar) {
         for (int i = 0; i < oranlar.length; i++) {
-            oranlar[i]=100*oylar[i]/Toplam(oylar);
+            oranlar[i]=100.0*oylar[i]/Toplam(oylar);
         }
     }
 
